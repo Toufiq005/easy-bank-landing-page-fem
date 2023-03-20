@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Frontend Mentor | Easybank landing page</title>
+  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="/build.css">
+</head>
+
+<body>
+  <div id="navModal" class="w-full h-screen hidden flex-col justify-center items-center absolute z-50">
+    <div class=" w-80 h-4/5 rounded-2xl bg-white flex flex-col justify-center items-center">
+      <div>
+        <button class="ml-52 mb-14" onclick="getModal()">
+          <img src="/images/icon-close.svg" alt="closeBtn">
+        </button>
+      </div>
+      <div>
+        <ul class="flex flex-col text-4xl justify-center text-dark-blue items-center">
+          <li class="my-5">
+            <a href="#">Home</a>
+          </li>
+          <li class="my-5">
+            <a href="#">About</a>
+          </li>
+          <li class="my-5">
+            <a href="#">Contact</a>
+          </li>
+          <li class="my-5">
+            <a href="#">Blog</a>
+          </li>
+          <li class="my-5">
+            <a href="#">Careers</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <nav class="flex justify-evenly items-center w-full h-16 bg-white text-dark-blue">
+    <div class="logo">
+      <img src="/images/logo.svg">
+    </div>
+    <div class="navbar max-sm:hidden">
+      <ul class="flex justify-center items-center">
+        <li class="mx-3">
+          <a href="#">Home</a>
+        </li>
+        <li class="mx-3">
+          <a href="#">About</a>
+        </li>
+        <li class="mx-3">
+          <a href="#">Contact</a>
+        </li>
+        <li class="mx-3">
+          <a href="#">Blog</a>
+        </li>
+        <li class="mx-3">
+          <a href="#">Careers</a>
+        </li>
+      </ul>
+    </div>
+    <div class="nav-btn max-sm:hidden">
+      <div class="btn text-white flex justify-center items-center rounded-3xl">
+        <a href="#">Request Invite</a>
+      </div>
+    </div>
+    <div class="sm:hidden">
+      <button onclick="getModal()">
+        <img src="/images/icon-hamburger.svg" alt="navBtn">
+      </button>
+    </div>
+  </nav>
+  <header class="text-dark-blue flex max-sm:flex-col justify-center items-center w-full h-screen">
+    <div>
+      <div class="flex justify-center items-center ">
+        <img src="/images/image-mockups.png"
+          class="absolute -z-10 top-0 right-0 sm:max-h-max sm:max-w-2xl overflow-hidden">
+        <img src="/images/bg-intro-desktop.svg"
+          class="sm:block hidden absolute -z-20 top-0 right-0 max-h-max max-w-4xl overflow-hidden">
+        <img src="/images/bg-intro-mobile.svg" class="sm:hidden absolute w-full h-auto -z-20 top-0">
+      </div>
+    </div>
+    <div
+      class="sm:mr-10 max-sm:items-center max-sm:flex max-sm:flex-col max-sm:justify-center max-sm:text-center max-sm:mt-80">
+      <h1 class="text-5xl">
+        Next generation <br> digital banking
+      </h1>
+      <p class="sm:w-1/3 my-5 text-light-gray">
+        Take your financial life online. Your Easybank account will be a one-stop-shop
+        for spending, saving, budgeting, investing, and much more.
+      </p>
+      <div class="btn text-white flex justify-center items-center rounded-3xl">
+        <a href="#">Request Invite</a>
+      </div>
+    </div>
+  </header>
+  <section class="bg-very-light-gray w-full max-sm:h-auto sm:h-screen text-dark-blue">
+    <div class="w-full h-1/3">
+      <div class="pt-14 sm:pl-14 max-sm:text-center ">
+        <h1 class="text-4xl text-dark-blue">
+          Why choose Easybank?
+        </h1>
+        <p class="text-light-gray max-sm:w-full sm:w-2/5 my-3">
+          We leverage Open Banking to turn your bank account into your financial hub. Control
+          your finances like never before.
+        </p>
+      </div>
+    </div>
+    <div class="flex max-sm:flex-col justify-evenly w-full h-2/3 items-center">
+      <div class="max-sm:flex max-sm:items-center max-sm:flex-col max-sm:text-center my-4">
+        <img src="/images/icon-online.svg" alt="">
+        <h1 class="text-xl my-4">
+          Online Banking
+        </h1>
+        <p class="text-light-gray w-60">
+          Our modern web and mobile applications allow you to keep track of your finances
+          wherever you are in the world.
+        </p>
+      </div>
+      <div class="max-sm:flex max-sm:items-center max-sm:flex-col max-sm:text-center my-4">
+        <img src="/images/icon-budgeting.svg" alt="">
+        <h1 class="text-xl my-4">
+          Simple Budgeting
+        </h1>
+        <p class="text-light-gray w-60">
+          See exactly where your money goes each month. Receive notifications when you’re
+          close to hitting your limits.
+        </p>
+      </div>
+      <div class="max-sm:flex max-sm:items-center max-sm:flex-col max-sm:text-center my-4">
+        <img src="/images/icon-onboarding.svg" alt="">
+        <h1 class="text-xl my-4">
+          Fast Onboarding
+        </h1>
+        <p class="text-light-gray w-60">
+          We don’t do branches. Open your account in minutes online and start taking control
+          of your finances right away.
+        </p>
+      </div>
+      <div class="max-sm:flex max-sm:items-center max-sm:flex-col max-sm:text-center my-4">
+        <img src="/images/icon-api.svg" alt="">
+        <h1 class="text-xl my-4">
+          Open API
+        </h1>
+        <p class="text-light-gray w-60">
+          Manage your savings, investments, pension, and much more from one account. Tracking
+          your money has never been easier.
+        </p>
+      </div>
+    </div>
+  </section>
+  <section class="w-full max-sm:h-auto sm:h-screen text-dark-blue">
+    <div class="w-full max-sm:py-10 h-1/4 text-dark-blue flex items-center">
+      <h1 class="text-4xl pl-16 ">
+        Latest Articles
+      </h1>
+    </div>
+    <div class="flex max-sm:flex-col justify-evenly items-center">
+      <div class="w-64 max-sm:w-4/5 h-auto">
+        <a href="#">
+          <div class="max-sm:flex max-sm:flex-col max-sm:items-center max-sm:text-center">
+            <div>
+              <img src="/images/image-currency.jpg">
+            </div>
+            <div class="my-3 w-56">
+              <p class="text-light-gray text-xs">
+                By Claire Robinson
+              </p>
+              <h1 class="text-xl my-2">
+                Receive money in any currency with no fees
+              </h1>
+              <p class="text-light-gray">
+                The world is getting smaller and we’re becoming more mobile. So why should you be
+                forced to only receive money in a single …
+              </p>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="w-64 max-sm:w-4/5 h-auto">
+        <a href="#">
+          <div class="max-sm:flex max-sm:flex-col max-sm:items-center max-sm:text-center">
+            <div>
+              <img src="/images/image-restaurant.jpg">
+            </div>
+            <div class="my-3 w-56">
+              <p class="text-light-gray text-xs">
+                By Wilson Hutton
+              </p>
+              <h1 class="text-xl my-2">
+                Treat yourself without worrying about money
+              </h1>
+              <p class="text-light-gray">
+                Our simple budgeting feature allows you to separate out your spending and set
+                realistic limits each month. That means you …
+              </p>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="w-64 max-sm:w-4/5 h-auto">
+        <a href="#">
+          <div class="max-sm:flex max-sm:flex-col max-sm:items-center max-sm:text-center">
+            <div>
+              <img src="/images/image-plane.jpg">
+            </div>
+            <div class="my-3 w-56">
+              <p class="text-light-gray text-xs">
+                By Wilson Hutton
+              </p>
+              <h1 class="text-xl my-2">
+                Take your Easybank card wherever you go
+              </h1>
+              <p class="text-light-gray">
+                We want you to enjoy your travels. This is why we don’t charge any fees on purchases
+                while you’re abroad. We’ll even show you …
+              </p>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="w-64 max-sm:w-4/5 h-auto">
+        <a href="#">
+          <div class="max-sm:flex max-sm:flex-col max-sm:items-center max-sm:text-center">
+            <div>
+              <img src="/images/image-confetti.jpg">
+            </div>
+            <div class="my-3 w-56">
+              <p class="text-light-gray text-xs">
+                By Claire Robinson
+              </p>
+              <h1 class="text-xl my-2">
+                Our invite-only Beta accounts are now live!
+              </h1>
+              <p class="text-light-gray">
+                After a lot of hard work by the whole team, we’re excited to launch our closed beta.
+                It’s easy to request an invite through the site ...
+              </p>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+  <div class=" max-sm:flex-col bg-dark-bule w-full text-light-gray flex justify-between items-center">
+    <div class=" max-sm:flex-col flex justify-between items-center">
+      <div class="flex max-sm:items-center max-sm:mt-4 flex-col sm:mx-7">
+        <div class="sm:mb-9">
+          <img src="/images/logo-footer.svg" alt="logo">
+        </div>
+        <div class="flex items-center">
+          <div class="m-2">
+            <a href="#">
+              <img src="/images/icon-facebook.svg">
+            </a>
+          </div>
+          <div class="m-2">
+            <a href="#">
+              <img src="/images/icon-youtube.svg">
+            </a>
+          </div>
+          <div class="m-2">
+            <a href="#">
+              <img src="/images/icon-twitter.svg">
+            </a>
+          </div>
+          <div class="m-2">
+            <a href="#">
+              <img src="/images/icon-pinterest.svg">
+            </a>
+          </div>
+          <div class="m-2">
+            <a href="#">
+              <img src="/images/icon-instagram.svg">
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="flex max-sm:flex-col max-sm:text-center items-center sm:mx-20">
+        <div>
+          <div class="m-5">
+            <a href="#">About Us</a>
+          </div>
+          <div class="m-5">
+            <a href="#">Contact</a>
+          </div>
+          <div class="sm:m-5">
+            <a href="#">Blog</a>
+          </div>
+        </div>
+        <div>
+          <div class="m-5">
+            <a href="#">Careers</a>
+          </div>
+          <div class="m-5">
+            <a href="#">Support</a>
+          </div>
+          <div class="m-5">
+            <a href="#">Privacy Policy</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="sm:mx-7 max-sm:flex max-sm:flex-col max-sm:items-center">
+      <div class="btn text-white flex justify-center items-center rounded-3xl max-sm:mb-5 sm:mb-9">
+        <a href="#">Request Invite</a>
+      </div>
+      <p class="text-xs">© Easybank. All Rights Reserved</p>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+  <!-- <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="https://github.com/Toufiq005">Toufiq Mowla</a>.
+  </div> -->
+</body>
+
+</html>
